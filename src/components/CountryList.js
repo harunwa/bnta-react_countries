@@ -1,17 +1,18 @@
 import React from "react";
 import Country from "./Country";
 
-const CountryList = ({countriesToVisit}) => {
-    const countryComponents = countriesToVisit.map((country, id) => {
+const CountryList = ({countries, title, handleAddToVisited}) => {
+    const countryComponents = countries.map((country, id) => {
         return <Country
             country={country}
             key={id}
+            handleAddToVisited={handleAddToVisited}
         />
 })
 
 return (
   <>
-  <h1><u>Countries That Haven't Been Visited</u></h1>
+  <h1><u>{title}</u></h1>
             {countryComponents}
   </>
 )
