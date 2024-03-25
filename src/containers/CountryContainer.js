@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import CountryList from '../components/CountryList';
+import '../App.css';
 
 const CountryContainer = () => {
     const [countriesToVisit, setCountriesToVisit] = useState([]);
@@ -32,10 +33,12 @@ const CountryContainer = () => {
             countries={countriesToVisit}
             handleAddToVisited={handleAddToVisited}
             title="Countries To Visit"
+            countriesVisited={countriesVisited}
             />
          <CountryList
             countries={countriesVisited}
             title="Countries Visited Already"
+            countriesVisited={countriesVisited}
         />
      </>
 
